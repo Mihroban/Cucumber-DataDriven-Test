@@ -15,8 +15,7 @@ public class BasePage {
 		this.driver= driver;
 		
 	}
-	
-	//page object classes give us the ability to chain actions via page objects;
+
 	//Below method means that it will return a HomePage object which returns the instance of HomePage Class;  
 	//The way to invoke the object is to call the method below:
 	//To get the instance of HomePage class, we simply return that object and pass it in its driver;
