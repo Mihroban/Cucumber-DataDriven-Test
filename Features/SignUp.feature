@@ -2,6 +2,7 @@
 Feature: Registeration function
   This feature is used to verify that user is able to register to the site
 
+#This feature file shows how Cucumber Examples works  
   @SignUpTest
   Scenario Outline: sign up Function
     Given user navigates to newtours.demoaut.com
@@ -16,3 +17,5 @@ Feature: Registeration function
     Examples: 
       | FirstName | LastName | EmailAddress         | Country        | UserName | PassWord |
       | Mikki     | Aisha    | mikkiusa11@gmail.com | UNITED KINGDOM | test     | test123  |
+
+      

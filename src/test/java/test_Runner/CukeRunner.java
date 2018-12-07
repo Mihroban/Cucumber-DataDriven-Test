@@ -10,8 +10,9 @@ import cucumber.api.junit.Cucumber;
 		features = {"Features"},
 		glue={"step_definitions"},
 		plugin = { "pretty", "html:target/cucumber-reports" },
-		tags = { "@SignUpTest",
-				//"@LoginTest"
+		tags = {//"@SignUpTest",
+				//"@DataTableExample",
+				"@LoginTest"
 		},
 		dryRun = false,
 		monochrome = true

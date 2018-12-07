@@ -22,6 +22,16 @@ public class RegisterPage extends BasePage{
 		
 	}
 	
+	public RegisterPage setMailingInfo(String address, String city, String state, String postalCode){
+		
+		driver.findElement(By.name("address1")).sendKeys(address);
+		driver.findElement(By.name("city")).sendKeys(city);
+		driver.findElement(By.name("state")).sendKeys(state);
+		driver.findElement(By.name("postalCode")).sendKeys(postalCode);
+		return new RegisterPage(driver);
+		
+	}	
+	
 	public RegisterPage clickDropdown(){
 		driver.findElement(By.name("country")).click();
 		return new RegisterPage(driver);
@@ -35,8 +45,8 @@ public class RegisterPage extends BasePage{
 	
 	public RegisterPage setUserInfo(String username, String password, String password2){
 		driver.findElement(By.id("email")).sendKeys(username);
-	     driver.findElement(By.name("password")).sendKeys(password);
-	     driver.findElement(By.name("confirmPassword")).sendKeys(password2);
+	    driver.findElement(By.name("password")).sendKeys(password);
+	    driver.findElement(By.name("confirmPassword")).sendKeys(password2);
 		return new RegisterPage(driver);
 		
 	}
@@ -49,6 +59,11 @@ public class RegisterPage extends BasePage{
 	public String getURL(){
 		String URL = driver.getCurrentUrl();
 		return URL;
+	}
+	
+	public String getTitle(){
+		String title = driver.getTitle();
+		return title;
 	}
 	
 }
