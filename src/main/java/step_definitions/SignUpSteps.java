@@ -64,25 +64,6 @@ public class SignUpSteps {
 		Assert.assertEquals(register.getURL(), "http://newtours.demoaut.com/create_account_success.php");
 		
 	}
-	
-	
- /**************************************************/
-	//Blow test is for validating login function
-	@Given("^user navigates to home page$")
-	public void user_navigates_to_home_page() throws Throwable {
-		home.navigateToWebApp();
 
-	}
-
-	@When("^user logs in using \"([^\"]*)\" and \"([^\"]*)\"$")
-	public void user_logs_in_using_and(String userName, String passWord) throws Throwable {
-		home.enterUserInfo(userName, passWord);
-	 
-	}
-	
-	@Then("^user should see logged in \"([^\"]*)\"$")
-	public void user_should_see_logged_in(String arg1) throws Throwable {
-	
-	}
 
 }
